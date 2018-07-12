@@ -1,0 +1,81 @@
+import React, {Component} from 'react';
+import _ from 'lodash';
+
+import { connect } from 'react-redux';
+import {fetchUser, fetchTags, fetchBadges} from '../../actions';
+import PageHeader from '../GlobalComponents/page_header';
+//import BadgeIcon from '../GlobalComponents/badge_icon';
+import UserBadges from './user_badges_by_tag';
+
+class UserDetail extends Component {
+  //automatic call fetch user detail to get user with particular id
+  componentWillMount(){
+    this.props.fetchTags();
+    this.props.fetchBadges();
+  }
+  componentDidMount(){
+      const {id} = this.props.match.params;
+      this.props.fetchUser(id);
+  }
+  //use intersection and for each of lodash to render badges by tags
+  renderBadgeEarned(){
+      const {user} = this.props;
+      const {badges} = this.props;
+      const {tags} = this.props;
+      return _.map(tags, (tag) => {
+          return (
+              <div key={tag.id}>
+                <div>{tag.name}</div>
+                <UserBadges
+                    tag={tag}
+                    user={user}
+                    badges={badges}
+                    //key={tags.id}
+                    />
+              </div>
+          );
+      } );
+  }
+    render(){
+      const {user} = this.props;
+      if (!user){
+          return <div>Loading...</div>
+      }
+
+      return (
+        <div>
+          <PageHeader />
+            <h3>Best At ...</h3>
+            <div>
+              <div className='d-flex flex-row'>
+                  <div className='p-3'>
+                    <img src={user.image} className='picture-profile'/>
+                    <div>{user.badges.length} BADGES EARNED</div>
+                  </div>
+
+                  <div className='p-3'>
+                    <div>Full Name:  {user.name}</div>
+                    <div>Cluster:   {user.cluster}</div>
+                    <div>Profile:  {user.profile}</div>
+                  </div>
+                  <div className='p-3'>
+                    <div>Full Name:  {user.skills}</div>
+                    <div>Contact:  {user.contact}</div>
+                  </div>
+              </div>
+            </div>
+            <div>
+              {this.renderBadgeEarned()}
+            </div>
+        </div>
+      );
+    }
+}
+
+function mapStateToProps(state, ownProps ){
+    return { user: state.users[ownProps.match.params.id],
+              tags: state.tags,
+                badges: state.badges};
+}
+
+export default connect(mapStateToProps, {fetchUser, fetchTags, fetchBadges})(UserDetail);
