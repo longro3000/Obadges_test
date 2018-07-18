@@ -8,15 +8,15 @@ export default class PageHeader extends Component {
           <span className="navbar-brand">
             <img src='https://officience.com/wp-content/themes/officience/images/logo_en.png' width='100px'/>
           </span>
-          <a>
+          <span>
           <Link className='btn' to='/'>Home Page</Link>
-          </a>
-          <a>
+          </span>
+          <span>
           <Link className='btn' to='/community'>Community Page</Link>
-          </a>
-          <a>
+          </span>
+          <span>
           <Link className='btn' to='/badge'>Badge Page</Link>
-          </a>
+          </span>
         </div>
     );
   }

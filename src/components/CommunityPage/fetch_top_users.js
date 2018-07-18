@@ -1,8 +1,14 @@
+//LIBRARY AND API
 import React,{ Component } from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
-import UserIcon from '../GlobalComponents/user_icon';
+
+//ACTION CREATORS
 import { fetchUsers } from '../../actions';
+
+//COMPONENTS
+import UserIcon from '../GlobalComponents/user_icon';
+
 
 //render top 5 user with most badges earned
 class TopUsers extends Component {

@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
-
 import { connect } from 'react-redux';
+
+//ACTION CREATORS
 import {fetchUser, fetchTags, fetchBadges} from '../../actions';
+
+//COMPONENTS
 import PageHeader from '../GlobalComponents/page_header';
-//import BadgeIcon from '../GlobalComponents/badge_icon';
 import UserBadges from './user_badges_by_tag';
 
 class UserDetail extends Component {
@@ -25,7 +27,7 @@ class UserDetail extends Component {
       return _.map(tags, (tag) => {
           return (
               <div key={tag.id}>
-                <div>{tag.name}</div>
+                <h4>{tag.name}</h4>
                 <UserBadges
                     tag={tag}
                     user={user}

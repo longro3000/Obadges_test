@@ -1,3 +1,5 @@
+
+//----------------------------DETAIL OF  A SINGLE BADGES--------------------
 import React, {Component} from 'react';
 import _ from 'lodash';
 
@@ -16,15 +18,22 @@ class BadgeDetail extends Component {
       const {id} = this.props.match.params;
       this.props.fetchBadge(id);
   }
+  //-------------------RENDER METHOD USER WHO EARNED THIS BADGES---------------------
   renderUser(){
-
-      return(
-        <div>abc</div>
-      );
+    const {users} = this.props;
+    const {badge} = this.props;
+        return _.map(users, (user)=>{
+            if (_.includes(user.badges,badge.id))
+                return <UserIcon
+                        user={user}
+                        key={user.id}/>
+        });
   }
+  //---------------RENDER METHOD-------------------------------------------
   render(){
     const {badge} = this.props;
     const {users} = this.props;
+
     if (!badge){
         return <div>Loading...</div>
     }
@@ -32,29 +41,29 @@ class BadgeDetail extends Component {
       <div>
         <PageHeader />
           <div>
-                <div className='p-3'>
-                  <img src={badge.image} className='picture-profile'/>
-                </div>
-          <div className='d-flex flex-row'>
-                <div className='p-3'>
-                  <h5>{badge.name}</h5>
-                  <div>Created by: {users[`${badge.issuer}`].name}</div>
-                  <div>Criteria:  {badge.criteria}</div>
-                </div>
-                <div className='p-3'>
-                  <div>Tags: {badge.tags.map((tag)=>{
+                  <div className='p-3'> // BADGE PICTURE
+                      <img src={badge.image} className='picture-profile'/>
+                  </div>
+                  <div className='d-flex flex-row'> //BADGE INFOS
+                      <div className='p-3'>
+                          <h5>{badge.name}</h5>
+                          <div>Created by: {users[`${badge.issuer}`].name}</div>
+                          <div>Criteria:  {badge.criteria}</div>
+                      </div>
+                    <div className='p-3'> // BADGES TAGS
+                      <div>Tags: {badge.tags.map((tag)=>{
                           return(
                               <p key={tag}>{tag}</p>
                             );}
                           )}
-                  </div>
+                      </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-          <div>
-            {this.renderUser()}
-          </div>
       </div>
+      <div> // USER EARNER THIS BADGE
+          {this.renderUser()}
+      </div>
+    </div>
     );
   }
 }

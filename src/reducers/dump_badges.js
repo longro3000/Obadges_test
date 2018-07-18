@@ -4,7 +4,7 @@ export const DUMP_BADGES = [{
 "id": "1",
 "name": "1st Badge",
 "criteria": "For doing awesome things with robots that people think is pretty great.",
-"image": "../images/skt.png",
+"image": "https://pbs.twimg.com/profile_images/831766546657714176/pJzos3cd_400x400.jpg",
 "tags": ["Developing", "Knowledge","Globalization","Sustainability","Value","Killer","PartyAnimal"],
 "issuer": "1"
 },{
@@ -13,7 +13,7 @@ export const DUMP_BADGES = [{
 "id": "2",
 "name": "2nd Badge",
 "criteria": "For awesome things with robots that people think is pretty great.",
-"image": "../../images/mixi.png",
+"image": "https://pbs.twimg.com/profile_images/831766546657714176/pJzos3cd_400x400.jpg",
 "tags": ["Knowledge", "Globalization","Eater","Killer","PartyAnimal"],
 "issuer": "3"
 },{
@@ -22,7 +22,7 @@ export const DUMP_BADGES = [{
 "id": "3",
 "name": "3rd Badge",
 "criteria": "For doing awesome things with robots that people think is pretty great.",
-"image": "../images/refund.png",
+"image": "https://pbs.twimg.com/profile_images/831766546657714176/pJzos3cd_400x400.jpg",
 "tags": ["Knowledge", "Globalization","Eater","PartyAnimal"],
 "issuer": "4"
 },{
@@ -31,7 +31,7 @@ export const DUMP_BADGES = [{
 "id": "4",
 "name": "4th Badge",
 "criteria": "For doing awesome robots that people think is pretty great.",
-"image": "../images/cloud9.png",
+"image": "https://pbs.twimg.com/profile_images/831766546657714176/pJzos3cd_400x400.jpg",
 "tags": ["Globalization", "Value","Gamer","Killer"],
 "issuer": "5"
 },{
@@ -40,7 +40,7 @@ export const DUMP_BADGES = [{
 "id": "5",
 "name": "5th Badge",
 "criteria": "For doing awesome things with people pretty great.",
-"image": "../images/fnatic.png",
+"image": "https://pbs.twimg.com/profile_images/831766546657714176/pJzos3cd_400x400.jpg",
 "tags": ["Sustainability", "Value","Gamer","Killer"],
 "issuer": "2"
 },];

@@ -1,7 +1,7 @@
 export const DUMP_TAGS = [
 {
       id: "1",
-      name: "Developing VietNam",
+      name: "Developing",
       badges: ["1","2"]
 },
 {

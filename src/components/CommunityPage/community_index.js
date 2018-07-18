@@ -1,8 +1,14 @@
+//----COMUNITY INDEX PAGE-----------
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+//ACTION CREATOR
+import { fetchUsers } from '../../actions';
+
+//COMPONENTS
 import PageHeader from '../GlobalComponents/page_header';
 import TopUsers from './fetch_top_users';
-import { connect } from 'react-redux';
-import { fetchUsers } from '../../actions';
+
 
 class CommunityIndex extends Component {
   render() {
