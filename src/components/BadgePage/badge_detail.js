@@ -24,9 +24,12 @@ class BadgeDetail extends Component {
     const {badge} = this.props;
         return _.map(users, (user)=>{
             if (_.includes(user.badges,badge.id))
-                return <UserIcon
+                return(
+                    <div className='col-xl-4'>
+                        <UserIcon
                         user={user}
                         key={user.id}/>
+                    </div>);
         });
   }
   //---------------RENDER METHOD-------------------------------------------
@@ -41,16 +44,16 @@ class BadgeDetail extends Component {
       <div>
         <PageHeader />
           <div>
-                  <div className='p-3'> // BADGE PICTURE
+                  <div className='p-3'>
                       <img src={badge.image} className='picture-profile'/>
                   </div>
-                  <div className='d-flex flex-row'> //BADGE INFOS
+                  <div className='d-flex flex-row'>
                       <div className='p-3'>
                           <h5>{badge.name}</h5>
                           <div>Created by: {users[`${badge.issuer}`].name}</div>
                           <div>Criteria:  {badge.criteria}</div>
                       </div>
-                    <div className='p-3'> // BADGES TAGS
+                    <div className='p-3'>
                       <div>Tags: {badge.tags.map((tag)=>{
                           return(
                               <p key={tag}>{tag}</p>
@@ -60,7 +63,7 @@ class BadgeDetail extends Component {
                     </div>
                 </div>
       </div>
-      <div> // USER EARNER THIS BADGE
+      <div>
           {this.renderUser()}
       </div>
     </div>

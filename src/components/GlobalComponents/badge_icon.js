@@ -13,7 +13,7 @@ export default function BadgeIcon({badge}) {
         </Tooltip>
     )
     return (
-        <div className='p-2' key={badge.id}>
+        <div className='col-xl-3' key={badge.id}>
           <div>
             <OverlayTrigger placement='top' overlay={tooltip}>
             <Link to={`/badge/${badge.id}`}>

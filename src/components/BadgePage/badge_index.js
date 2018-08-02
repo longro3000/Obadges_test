@@ -46,7 +46,7 @@ class BadgeIndex extends Component {
   }
   //-----------------when checkbox is submited-------------------------
   onSubmit(values){
-      this.onTagChecked(values);
+      this.onTagChecked(values.Tags);
   }
   //------------render checkbox of badges---------------
 
@@ -72,8 +72,11 @@ class BadgeIndex extends Component {
         <div>
         <PageHeader />
         <div>Badge</div>
-        <div><SearchBar onSearchTermChange={this.onSearchChange}/></div>
-        <div>{this.renderBadgeForm()}</div>
+        <div><SearchBar
+              onSearchTermChange={this.onSearchChange}
+              target='badges'
+                /></div>
+        <div className='col-xl-4'>{this.renderBadgeForm()}</div>
             <BadgeList
               Tags={this.state.tags}
               Badges={this.props.badges}
@@ -91,7 +94,7 @@ function mapStateToProps( state){
 }
 
 export default reduxForm({
-  form: 'BadgeNewForm'
+  form: 'BadgeSearchForm'
 })(
   connect(mapStateToProps,{ fetchTags, fetchBadges })(BadgeIndex)
 );

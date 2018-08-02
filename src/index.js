@@ -11,6 +11,7 @@ import CommunityIndex from './components/CommunityPage/community_index';
 import BadgeIndex from './components/BadgePage/badge_index';
 import UserDetail from './components/CommunityPage/user_detail';
 import BadgeDetail from './components/BadgePage/badge_detail';
+import AddBadge from './components/AddBadgePage/add_badge';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -19,6 +20,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
+          <Route path='/addbadge' component={AddBadge}/>
           <Route path='/community/:id' component={UserDetail}/>
           <Route path='/community' component={CommunityIndex}/>
           <Route path='/badge/:id' component={BadgeDetail}/>

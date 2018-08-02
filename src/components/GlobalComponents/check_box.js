@@ -16,7 +16,6 @@ export default class CheckboxGroup extends Component {
     const inputValue = input.value;
 
     const checkboxes = options.map(({name}, index) => {
-
       const handleChange = (event) => {
         const arr = [...inputValue];
         if (event.target.checked) {
@@ -28,7 +27,9 @@ export default class CheckboxGroup extends Component {
         onBlur(arr);
         return onChange(arr);
       };
+
       const checked = inputValue.includes(name);
+
       return (
         <div>
         <label key={`checkbox-${index}`}>

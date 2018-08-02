@@ -12,10 +12,13 @@ export default class PageHeader extends Component {
           <Link className='btn' to='/'>Home Page</Link>
           </span>
           <span>
-          <Link className='btn' to='/community'>Community Page</Link>
+          <Link className='btn' to='/community'>Offy Tribe</Link>
           </span>
           <span>
-          <Link className='btn' to='/badge'>Badge Page</Link>
+          <Link className='btn' to='/badge'>Badge Collection</Link>
+          </span>
+          <span>
+          <Link className='btn' to='/addbadge'>Add Badge</Link>
           </span>
         </div>
     );
