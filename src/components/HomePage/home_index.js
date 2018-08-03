@@ -5,7 +5,7 @@ export default class HomeIndex extends Component {
   render() {
     return (
         <div>
-        <PageHeader />
+        <PageHeader home='home' />
         <div>Home Page</div>
         </div>
     );

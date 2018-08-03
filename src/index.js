@@ -21,8 +21,8 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path='/addbadge' component={AddBadge}/>
-          <Route path='/community/:id' component={UserDetail}/>
-          <Route path='/community' component={CommunityIndex}/>
+          <Route path='/tribe/:id' component={UserDetail}/>
+          <Route path='/tribe' component={CommunityIndex}/>
           <Route path='/badge/:id' component={BadgeDetail}/>
           <Route path='/badge' component={BadgeIndex}/>
           <Route path='/' component={HomeIndex}/>
