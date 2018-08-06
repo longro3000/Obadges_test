@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from "classnames";
 import { Link } from 'react-router-dom';
 import withStyles from "@material-ui/core/styles/withStyles";
 import List from "@material-ui/core/List";
@@ -6,28 +7,38 @@ import ListItem from "@material-ui/core/ListItem";
 
 import Header from "../../UI_components/Header/Header.jsx";
 import Button from "../../UI_components/CustomButtons/Button.jsx";
-import GridContainer from "../../UI_components/Grid/GridContainer.jsx";
-import GridItem from "../../UI_components/Grid/GridItem.jsx";
-import navbarsStyle from "../../assets/jss/material-kit-react/views/componentsSections/navbarsStyle.jsx";
+import componentsStyle from "../../assets/jss/material-kit-react/views/components.jsx";
 
 class PageHeader extends Component {
   activePage(currentPage) {
       if( currentPage === this.props.page) {
-          return this.props.classes.navLink + ' ' + this.props.classes.navLinkActive;
+          return (this.props.classes.navLink + ' ' + this.props.classes.navLinkActive);
       }
-      return this.props.classes.navLink;
-  }
+      return (this.props.classes.navLink);
+  };
+  brand(){
+    return (
+      <Link to='./' className={this.props.classes.link}>
+        <Button
+          color='transparent'
+        >
+          <img src='http://4sv.vn/blog/wp-content/uploads/2017/10/Officience-s-logo.png' className='picture-profile'/>
+        </Button>
+      </Link>
+    );
+  };
   render(){
-    const {classes} = this.props;
+    const {classes, ...rest} = this.props;
     const {page} = this.props;
     return (
-          <div className={classes.section}>
-            <div className={classes.container}>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={12}>
                     <Header
-                        brand={<img src='http://4sv.vn/blog/wp-content/uploads/2017/10/Officience-s-logo.png' className='picture-profile'/>}
-                        color='primary'
+                        brand={this.brand()}
+                        color='transparent'
+                        fixed
+                        changeColorOnScroll={{
+                            height: 400,
+                            color: 'primary'
+                        }}
                         leftLinks={
                             <List className={classes.list}>
                               <ListItem className={classes.listItem}>
@@ -106,13 +117,10 @@ class PageHeader extends Component {
                             </ListItem>
                           </List>
                         }
+                      {...rest}
                       />
-                </GridItem>
-              </GridContainer>
-            </div>
-          </div>
     );
   }
 }
 
-export default withStyles(navbarsStyle)(PageHeader);
+export default withStyles(componentsStyle)(PageHeader);

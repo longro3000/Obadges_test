@@ -1,6 +1,7 @@
-import { container } from "assets/jss/material-kit-react.jsx";
+import { container } from "../../material-kit-react.jsx";
+import headerLinksStyle from "../components/headerLinksStyle.jsx";
 
-const componentsStyle = {
+const componentsStyle = theme => ({
   container,
   brand: {
     color: "#FFFFFF",
@@ -33,7 +34,8 @@ const componentsStyle = {
   },
   textCenter: {
     textAlign: "center"
-  }
-};
+  },
+  ...headerLinksStyle(theme)
+});
 
 export default componentsStyle;

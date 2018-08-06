@@ -17,7 +17,7 @@ const headerStyle = {
     display: "flex",
     border: "0",
     borderRadius: "3px",
-    padding: "0.625rem 0",
+    padding: "0 0",
     marginBottom: "20px",
     color: "#555",
     width: "100%",
@@ -68,8 +68,6 @@ const headerStyle = {
   primary: {
     backgroundColor: primaryColor,
     color: "#FFFFFF",
-    boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46)"
   },
   info: {
     backgroundColor: infoColor,

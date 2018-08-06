@@ -9,9 +9,10 @@ const headerLinksStyle = theme => ({
     margin: 0,
     paddingLeft: "0",
     listStyle: "none",
-    paddingTop: "0",
-    paddingBottom: "0",
-    color: "inherit"
+    paddingTop: "0px",
+    paddingBottom: "0px",
+    color: "inherit",
+    textDecoration: "none"
   },
   listItem: {
     float: "left",
@@ -21,6 +22,7 @@ const headerLinksStyle = theme => ({
     width: "auto",
     margin: "0",
     padding: "0",
+    textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       "&:after": {
@@ -40,9 +42,9 @@ const headerLinksStyle = theme => ({
     font: 'Lato',
     color: "#8a8c8f",
     position: "relative",
-    padding: "0.9375rem",
+    padding: "10px",
     fontWeight: "400",
-    fontSize: "24px",
+    fontSize: "16px",
     textTransform: "uppercase",
     borderRadius: "3px",
     lineHeight: "20px",
@@ -50,8 +52,9 @@ const headerLinksStyle = theme => ({
     margin: "0px",
     display: "inline-flex",
     "&:hover,&:focus": {
-      color: "inherit",
-      background: "rgba(200, 200, 200, 0.2)"
+      textDecoration: "none",
+      color: "black",
+      background: "rgba(200, 200, 200, 0.2)",
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 30px)",
@@ -90,7 +93,7 @@ const headerLinksStyle = theme => ({
   navLinkActive: {
     color: "#8a8c8f",
     backgroundColor: "rgba(255, 255, 255, 0.1)",
-    fontWeight: "bold"
+    fontWeight: "900"
   },
   icons: {
     width: "20px",
