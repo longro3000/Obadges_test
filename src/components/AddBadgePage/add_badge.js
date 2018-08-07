@@ -12,6 +12,7 @@ import CustomTabs from "../../UI_components/CustomTabs/CustomTabs.jsx";
 import FirstPage from './first_page';
 import SecondPage from './second_page';
 import ThirdPage from './third_page';
+import PageHeader from '../GlobalComponents/page_header';
 import PropTypes from 'prop-types';
 
 
@@ -41,6 +42,8 @@ class AddBadge extends Component {
   render() {
     const { page } = this.state;
     return (
+              <div>
+              <PageHeader page='addbadge' />
               <CustomTabs
                   headerColor='primary'
                   onButtonClick = {this.state.page}
@@ -73,6 +76,7 @@ class AddBadge extends Component {
                     }
                   ]}
                 />
+                </div>
     );
   };
 }

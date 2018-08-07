@@ -16,23 +16,12 @@ class PageHeader extends Component {
       }
       return (this.props.classes.navLink);
   };
-  brand(){
-    return (
-      <Link to='./' className={this.props.classes.link}>
-        <Button
-          color='transparent'
-        >
-          <img src='http://4sv.vn/blog/wp-content/uploads/2017/10/Officience-s-logo.png' className='picture-profile'/>
-        </Button>
-      </Link>
-    );
-  };
   render(){
     const {classes, ...rest} = this.props;
     const {page} = this.props;
     return (
                     <Header
-                        brand={this.brand()}
+                        brand={<img src='http://4sv.vn/blog/wp-content/uploads/2017/10/Officience-s-logo.png' className='picture-profile'/>}
                         color='transparent'
                         fixed
                         changeColorOnScroll={{

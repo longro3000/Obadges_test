@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import AppBar from "@material-ui/core/AppBar";
@@ -74,9 +75,11 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     });
     const brandComponent = (
+        <Link to='./'>
       <Button className={classes.title}>
         {brand}
       </Button>
+        </Link>
     );
     return (
       <AppBar className={appBarClasses}>

@@ -70,7 +70,7 @@ class BadgeIndex extends Component {
     console.log(tags);
     return (
         <div>
-        <PageHeader />
+        <PageHeader page='badge'/>
         <div>Badge</div>
         <div><SearchBar
               onSearchTermChange={this.onSearchChange}

@@ -14,7 +14,7 @@ class CommunityIndex extends Component {
   render() {
     return (
         <div>
-        <PageHeader />
+        <PageHeader page='tribe'/>
         <div className='title-community'>Community</div>
         <TopUsers />
         </div>
