@@ -8,6 +8,10 @@ import {fetchUser, fetchTags, fetchBadges} from '../../actions';
 //COMPONENTS
 import PageHeader from '../GlobalComponents/page_header';
 import UserBadges from './user_badges_by_tag';
+import Parallax from "../../UI_components/Parallax/Parallax.jsx";
+import componentsStyle from "../../assets/jss/material-kit-react/views/components.jsx";
+import classNames from "classnames";
+import withStyles from "@material-ui/core/styles/withStyles";
 
 class UserDetail extends Component {
   //automatic call fetch user detail to get user with particular id
@@ -39,14 +43,17 @@ class UserDetail extends Component {
       } );
   }
     render(){
+      const {classes} = this.props;
       const {user} = this.props;
       if (!user){
           return <div>Loading...</div>
       }
-
       return (
         <div>
-          <PageHeader />
+          <PageHeader page='tribe'/>
+            <Parallax image={""}>
+            </Parallax>
+            <div className={classNames(classes.main)}>
             <h3>Best At ...</h3>
             <div>
               <div className='d-flex flex-row'>
@@ -69,6 +76,7 @@ class UserDetail extends Component {
             <div>
               {this.renderBadgeEarned()}
             </div>
+            </div>
         </div>
       );
     }
@@ -80,4 +88,4 @@ function mapStateToProps(state, ownProps ){
                 badges: state.badges};
 }
 
-export default connect(mapStateToProps, {fetchUser, fetchTags, fetchBadges})(UserDetail);
+export default connect(mapStateToProps, {fetchUser, fetchTags, fetchBadges})(withStyles(componentsStyle)(UserDetail));

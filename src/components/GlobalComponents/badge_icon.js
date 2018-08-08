@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 export default function BadgeIcon({badge}) {
@@ -17,7 +16,7 @@ export default function BadgeIcon({badge}) {
           <div>
             <OverlayTrigger placement='top' overlay={tooltip}>
             <Link to={`/badge/${badge.id}`}>
-              <img src={badge.image} className='picture-icon' />
+              <img src={badge.image} style={{}} />
             </Link>
             </OverlayTrigger>
           </div>

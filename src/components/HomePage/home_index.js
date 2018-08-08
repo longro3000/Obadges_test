@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
+
 import PageHeader from '../GlobalComponents/page_header';
 import componentsStyle from "../../assets/jss/material-kit-react/views/components.jsx";
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 import GridContainer from "../../UI_components/Grid/GridContainer.jsx";
 import GridItem from "../../UI_components/Grid/GridItem.jsx";
+import TopUsers from '../CommunityPage/fetch_top_users';
 
 class HomeIndex extends Component {
   render() {
@@ -15,9 +17,9 @@ class HomeIndex extends Component {
             <PageHeader page='home' />
             <Parallax image={""}>
             </Parallax>
-            <div className={classNames(classes.main, classes.mainRaised)}>
+            <div className={classNames(classes.main)}>
               <div>
-                SOMETHING
+                    <TopUsers />
               </div>
             </div>
         </div>

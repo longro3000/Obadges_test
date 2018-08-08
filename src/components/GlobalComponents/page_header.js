@@ -31,7 +31,7 @@ class PageHeader extends Component {
                         leftLinks={
                             <List className={classes.list}>
                               <ListItem className={classes.listItem}>
-                                <Link to='./' className={classes.link}>
+                                <Link to='/' className={classes.link}>
                                   <Button
                                     className={this.activePage('home')}
                                     color='transparent'
@@ -41,7 +41,7 @@ class PageHeader extends Component {
                                 </Link>
                               </ListItem>
                               <ListItem className={classes.listItem}>
-                                <Link to='./tribe' className={classes.link}>
+                                <Link to='/tribe' className={classes.link}>
                                   <Button
                                     className={this.activePage('tribe')}
                                     color='transparent'
@@ -51,7 +51,7 @@ class PageHeader extends Component {
                                 </Link>
                               </ListItem>
                               <ListItem className={classes.listItem}>
-                                <Link to='./badge' className={classes.link}>
+                                <Link to='/badge' className={classes.link}>
                                   <Button
                                     className={this.activePage('badge')}
                                     color='transparent'
@@ -61,7 +61,7 @@ class PageHeader extends Component {
                                 </Link>
                               </ListItem>
                               <ListItem className={classes.listItem}>
-                                <Link to='./addbadge' className={classes.link}>
+                                <Link to='/addbadge' className={classes.link}>
                                   <Button
                                     className={this.activePage('addbadge')}
                                     color='transparent'
@@ -75,7 +75,7 @@ class PageHeader extends Component {
                         rightLinks={
                           <List className={classes.list}>
                             <ListItem className={classes.listItem}>
-                              <Link to='./' className={classes.link}>
+                              <Link to='/' className={classes.link}>
                                 <Button
                                   className={classes.navLink}
                                   color='transparent'
@@ -85,7 +85,7 @@ class PageHeader extends Component {
                               </Link>
                             </ListItem>
                             <ListItem className={classes.listItem}>
-                              <Link to='./' className={classes.link}>
+                              <Link to='/' className={classes.link}>
                                 <Button
                                   className={classes.navLink}
                                   color='transparent'
@@ -95,7 +95,7 @@ class PageHeader extends Component {
                               </Link>
                             </ListItem>
                             <ListItem className={classes.listItem}>
-                              <Link to='./' className={classes.link}>
+                              <Link to='/' className={classes.link}>
                                 <Button
                                   className={classes.navLink +' '+ classes.navLinkActive}
                                   color='transparent'

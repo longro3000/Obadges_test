@@ -13,7 +13,7 @@ export default function UserBadges ({tag, user, badges})
   //slider settings
 
   const settings={
-  dots: true,
+      dots: true,
       infinite: false,
       speed: 500,
       slidesToShow: 3,
