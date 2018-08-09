@@ -8,6 +8,7 @@ import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 import GridContainer from "../../UI_components/Grid/GridContainer.jsx";
 import GridItem from "../../UI_components/Grid/GridItem.jsx";
 import TopUsers from '../CommunityPage/fetch_top_users';
+import background from '../../Image/Offy-flower.png';
 
 class HomeIndex extends Component {
   render() {
@@ -15,7 +16,8 @@ class HomeIndex extends Component {
     return (
         <div>
             <PageHeader page='home' />
-            <Parallax image={""}>
+            <Parallax image={''}>
+              <img src={background} />
             </Parallax>
             <div className={classNames(classes.main)}>
               <div>

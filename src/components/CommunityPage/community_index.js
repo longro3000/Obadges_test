@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 //ACTION CREATOR
 import { fetchUsers } from '../../actions';
-
 //COMPONENTS
 import PageHeader from '../GlobalComponents/page_header';
 import TopUsers from './fetch_top_users';
@@ -14,6 +13,9 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 
 class CommunityIndex extends Component {
+  componentDidMount(){
+      this.props.fetchUsers();
+  }
   render() {
     const { classes } = this.props;
     return (
@@ -22,10 +24,14 @@ class CommunityIndex extends Component {
             <Parallax image={""}>
             </Parallax>
           <div className={classNames(classes.main)}>
-              <TopUsers />
+              <TopUsers users={this.props.users}/>
           </div>
         </div>
     );
   }
 }
-export default withStyles(componentsStyle)(CommunityIndex);
+
+function mapStateToProps(state){
+    return {users: state.users};
+}
+export default connect(mapStateToProps, {fetchUsers})(withStyles(componentsStyle)(CommunityIndex));

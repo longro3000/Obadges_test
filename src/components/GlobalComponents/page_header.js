@@ -8,6 +8,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Header from "../../UI_components/Header/Header.jsx";
 import Button from "../../UI_components/CustomButtons/Button.jsx";
 import componentsStyle from "../../assets/jss/material-kit-react/views/components.jsx";
+import logo from '../../Image/logo.png';
 
 class PageHeader extends Component {
   activePage(currentPage) {
@@ -21,7 +22,7 @@ class PageHeader extends Component {
     const {page} = this.props;
     return (
                     <Header
-                        brand={<img src='http://4sv.vn/blog/wp-content/uploads/2017/10/Officience-s-logo.png' className='picture-profile'/>}
+                        brand={<img src={logo}/>}
                         color='transparent'
                         fixed
                         changeColorOnScroll={{
