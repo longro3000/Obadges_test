@@ -15,6 +15,10 @@ import ThirdPage from './third_page';
 import PageHeader from '../GlobalComponents/page_header';
 import PropTypes from 'prop-types';
 
+import classNames from "classnames";
+import withStyles from "@material-ui/core/styles/withStyles";
+import addBadgePageStyle from "../../assets/jss/material-kit-react/views/addBadgePage.jsx";
+import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 
 class AddBadge extends Component {
   constructor(props) {
@@ -85,4 +89,4 @@ function mapStateToProps(state){
         tags : state.tags,
     }
 };
-export default connect(mapStateToProps)(AddBadge);
+export default connect(mapStateToProps)(withStyles(addBadgePageStyle)(AddBadge));

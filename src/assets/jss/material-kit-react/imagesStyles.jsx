@@ -1,4 +1,7 @@
 const imagesStyles = {
+  imgTag:{
+      float: "left"
+  },
   imgFluid: {
     maxWidth: "100%",
     height: "auto"

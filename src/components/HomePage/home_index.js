@@ -3,7 +3,7 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 import PageHeader from '../GlobalComponents/page_header';
-import componentsStyle from "../../assets/jss/material-kit-react/views/components.jsx";
+import homePageStyle from "../../assets/jss/material-kit-react/views/homePage.jsx";
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 import GridContainer from "../../UI_components/Grid/GridContainer.jsx";
 import GridItem from "../../UI_components/Grid/GridItem.jsx";
@@ -17,7 +17,9 @@ class HomeIndex extends Component {
         <div>
             <PageHeader page='home' />
             <Parallax image={''}>
-              <img src={background} />
+              <div className={classes.backgroundcontainer}>
+                <img src={background} />
+              </div>
             </Parallax>
             <div className={classNames(classes.main)}>
               <div>
@@ -29,4 +31,4 @@ class HomeIndex extends Component {
   }
 }
 
-export default withStyles(componentsStyle)(HomeIndex);
+export default withStyles(homePageStyle)(HomeIndex);

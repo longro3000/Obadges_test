@@ -1,7 +1,7 @@
 import { container } from "../../material-kit-react.jsx";
 import headerLinksStyle from "../components/headerLinksStyle.jsx";
 
-const componentsStyle = theme => ({
+const addBadgePageStyle = theme => ({
   container,
   brand: {
     color: "#FFFFFF",
@@ -34,4 +34,4 @@ const componentsStyle = theme => ({
   ...headerLinksStyle(theme)
 });
 
-export default componentsStyle;
+export default addBadgePageStyle;

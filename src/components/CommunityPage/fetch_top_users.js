@@ -51,11 +51,11 @@ export default function TopUsers ({users})
         <Slider {...settings}>
             {_.map(users, (user)=>{
               return(
-                <div key={user.id}>
                   <UserIcon
+                      key={user.id}
                       user = {users}
                       />
-                    </div>)
+                    )
               })}
               </Slider>);
 }

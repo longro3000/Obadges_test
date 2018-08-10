@@ -7,7 +7,7 @@ import { fetchUsers } from '../../actions';
 //COMPONENTS
 import PageHeader from '../GlobalComponents/page_header';
 import TopUsers from './fetch_top_users';
-import componentsStyle from "../../assets/jss/material-kit-react/views/components.jsx";
+import tribePageStyle from "../../assets/jss/material-kit-react/views/tribePage.jsx";
 import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
@@ -34,4 +34,4 @@ class CommunityIndex extends Component {
 function mapStateToProps(state){
     return {users: state.users};
 }
-export default connect(mapStateToProps, {fetchUsers})(withStyles(componentsStyle)(CommunityIndex));
+export default connect(mapStateToProps, {fetchUsers})(withStyles(tribePageStyle)(CommunityIndex));

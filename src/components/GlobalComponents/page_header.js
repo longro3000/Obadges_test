@@ -12,7 +12,7 @@ import logo from '../../Image/logo.png';
 
 class PageHeader extends Component {
   activePage(currentPage) {
-      if( currentPage === this.props.page) {
+      if (currentPage === this.props.page) {
           return (this.props.classes.navLink + ' ' + this.props.classes.navLinkActive);
       }
       return (this.props.classes.navLink);
@@ -26,7 +26,7 @@ class PageHeader extends Component {
                         color='transparent'
                         fixed
                         changeColorOnScroll={{
-                            height: 400,
+                            height: ((page === 'home') ? 1200 : 400),
                             color: 'primary'
                         }}
                         leftLinks={

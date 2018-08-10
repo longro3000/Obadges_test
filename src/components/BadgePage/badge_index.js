@@ -13,6 +13,11 @@ import BadgeList from './badge_list';
 import SearchBar from '../GlobalComponents/search_bar';
 import PageHeader from '../GlobalComponents/page_header';
 import CheckboxGroup from '../GlobalComponents/check_box';
+import classNames from "classnames";
+import withStyles from "@material-ui/core/styles/withStyles";
+import badgePageStyle from "../../assets/jss/material-kit-react/views/badgePage.jsx";
+import Parallax from "../../UI_components/Parallax/Parallax.jsx";
+
 
 class BadgeIndex extends Component {
   componentDidMount(){
@@ -96,5 +101,4 @@ function mapStateToProps( state){
 export default reduxForm({
   form: 'BadgeSearchForm'
 })(
-  connect(mapStateToProps,{ fetchTags, fetchBadges })(BadgeIndex)
-);
+  connect(mapStateToProps,{ fetchTags, fetchBadges })(withStyles(badgePageStyle)(BadgeIndex)));

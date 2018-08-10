@@ -1,7 +1,7 @@
-import { cardTitle, title } from "assets/jss/material-kit-react.jsx";
-import imagesStyle from "assets/jss/material-kit-react/imagesStyles.jsx";
+import { cardTitle, title } from "../../../material-kit-react.jsx";
+import imagesStyle from "../../imagesStyles.jsx";
 
-const teamStyle = {
+const userCardStyle = {
   section: {
     padding: "70px 0",
     textAlign: "center"
@@ -14,13 +14,27 @@ const teamStyle = {
     textDecoration: "none"
   },
   ...imagesStyle,
-  itemGrid: {
+  imageGrid: {
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
+    paddingLeft: "0px",
+    paddingRight: "0px",
+    maxWidth: "274px",
+    maxHeight:"274px"
   },
+    tagGrid:{
+      marginTop:"10px",
+      marginBottom: "10px",
+      marginLeft: "auto",
+      marginRight: "auto",
+      paddingLeft: "0px",
+      paddingRight: "0px",
+      paddingTop: "auto",
+      textAlign: "left"
+    },
   cardTitle,
   smallTitle: {
-    color: "#6c757d"
+    color: "#8A8C8F"
   },
   description: {
     color: "#999"
@@ -44,4 +58,4 @@ const teamStyle = {
   }
 };
 
-export default teamStyle;
+export default userCardStyle;

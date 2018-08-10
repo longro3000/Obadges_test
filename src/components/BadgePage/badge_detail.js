@@ -25,11 +25,12 @@ class BadgeDetail extends Component {
         return _.map(users, (user)=>{
             if (_.includes(user.badges,badge.id))
                 return(
-                    <div className='col-xl-4'>
+
                         <UserIcon
-                        user={user}
-                        key={user.id}/>
-                    </div>);
+                          key={user.id}
+                          user={user}
+                        />
+                      );
         });
   }
   //---------------RENDER METHOD-------------------------------------------
