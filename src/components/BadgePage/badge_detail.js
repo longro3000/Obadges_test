@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import {fetchUsers, fetchTags, fetchBadge} from '../../actions';
 import PageHeader from '../GlobalComponents/page_header';
 import UserIcon from '../GlobalComponents/user_icon';
+import Footer from '../../UI_components/Footer/Footer';
 
 class BadgeDetail extends Component {
   //automatic call fetch user detail to get user with particular id
@@ -67,6 +68,7 @@ class BadgeDetail extends Component {
       <div>
           {this.renderUser()}
       </div>
+    <Footer />
     </div>
     );
   }

@@ -12,6 +12,7 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 
+import Footer from '../../UI_components/Footer/Footer';
 class CommunityIndex extends Component {
   componentDidMount(){
       this.props.fetchUsers();
@@ -26,6 +27,7 @@ class CommunityIndex extends Component {
           <div className={classNames(classes.main)}>
               <TopUsers users={this.props.users}/>
           </div>
+          <Footer />
         </div>
     );
   }

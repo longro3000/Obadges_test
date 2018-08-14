@@ -16,7 +16,7 @@ import CardBody from "../../UI_components/Card/CardBody.jsx";
 import CardFooter from "../../UI_components/Card/CardFooter.jsx";
 
 //sample image
-import tag5 from '../../Image/5-tag-image.png';
+import tag5 from '../../Image/5-tag.png';
 import otherTag from '../../Image/other-tag.png';
 
 import userCardStyle from "../../assets/jss/material-kit-react/views/TribePageSections/userCardStyle.jsx";
@@ -31,6 +31,7 @@ class UserIcon extends Component{
       classes.imgTag
     );
     return (
+    <GridContainer>
       <GridItem xs={12} sm={12} md={3}>
             <Card plain>
               <GridItem xs={12} sm={12} md={12} className={classes.imageGrid}>
@@ -45,22 +46,25 @@ class UserIcon extends Component{
               </h4>
               <CardBody>
                 <GridItem xs={12} sm={12} md={12} className={classes.tagGrid}>
-                    <img src={tag5} className={imageClasses} />
-                    <span style={{float:"right"}}>
-                      <h6>Creating Shared Value</h6>
-                      <p>8</p>
-                    </span>
-                </GridItem>
-                <GridItem xs={12} sm={12} md={12} className={classes.tagGrid}>
+                    <div>
+                      <img src={tag5} className={imageClasses} />
+                      <span style={{float:"right"}}>
+                        <h6>Creating Shared Value</h6>
+                        <div>8</div>
+                      </span>
+                    </div>
+                    <div>
                     <img src={otherTag} className={imageClasses} />
                     <span style={{float:"right"}}>
                       <h6>CMS</h6>
-                      <p>8</p>
+                      <div>8</div>
                     </span>
+                  </div>
                 </GridItem>
               </CardBody>
             </Card>
       </GridItem>
+    </GridContainer>
     );
   }
 }

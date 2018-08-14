@@ -9,6 +9,8 @@ import GridContainer from "../../UI_components/Grid/GridContainer.jsx";
 import GridItem from "../../UI_components/Grid/GridItem.jsx";
 import TopUsers from '../CommunityPage/fetch_top_users';
 import background from '../../Image/Offy-flower.png';
+import Footer from '../../UI_components/Footer/Footer';
+
 
 class HomeIndex extends Component {
   render() {
@@ -26,6 +28,7 @@ class HomeIndex extends Component {
                     <TopUsers />
               </div>
             </div>
+          <Footer />
         </div>
     );
   }

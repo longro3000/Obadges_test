@@ -1,25 +1,28 @@
-import { container, primaryColor } from "assets/jss/material-kit-react.jsx";
+import { container, primaryColor, textColor } from "../../material-kit-react.jsx";
 
 const footerStyle = {
+  gridItem:{
+      padding: "0 0",
+      color: textColor
+  },
+  button:{
+      padding:"0",
+      marginRight: "10px"
+  },
+  a:{
+    "&,&:hover,&:focus": {
+      color: textColor,
+      backgroundColor:"#FFFFFF"
+    }
+  },
   block: {
-    color: "inherit",
-    padding: "0.9375rem",
-    fontWeight: "500",
-    fontSize: "12px",
-    textTransform: "uppercase",
-    borderRadius: "3px",
-    textDecoration: "none",
-    position: "relative",
-    display: "block"
+      textAlign: "left!important"
   },
-  left: {
-    float: "left!important",
-    display: "block"
+  leftCorner: {
+    paddingRight: "33%",
   },
-  right: {
-    padding: "15px 0",
-    margin: "0",
-    float: "right!important"
+  rightCorner: {
+    padding:"0 10px",
   },
   footer: {
     padding: "0.9375rem 0",
@@ -28,8 +31,9 @@ const footerStyle = {
     zIndex: "2",
     position: "relative"
   },
-  a: {
-    color: primaryColor,
+  title: {
+    textTransform: "uppercase",
+    color: "#8A8C8F",
     textDecoration: "none",
     backgroundColor: "transparent"
   },
