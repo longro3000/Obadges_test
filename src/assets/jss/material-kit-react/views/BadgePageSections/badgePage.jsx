@@ -1,7 +1,7 @@
-import { container } from "../../material-kit-react.jsx";
-import headerLinksStyle from "../components/headerLinksStyle.jsx";
+import { container } from "../../../material-kit-react.jsx";
+import headerLinksStyle from "../../components/headerLinksStyle.jsx";
 
-const tribePageStyle = theme => ({
+const badgePageStyle = theme => ({
   container,
   brand: {
     color: "#FFFFFF",
@@ -34,4 +34,4 @@ const tribePageStyle = theme => ({
   ...headerLinksStyle(theme)
 });
 
-export default tribePageStyle;
+export default badgePageStyle;

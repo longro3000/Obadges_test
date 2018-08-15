@@ -9,7 +9,9 @@ import {
   roseColor,
   transition,
   boxShadow,
-  drawerWidth
+  drawerWidth,
+  backgroundColor,
+  textColor
 } from "../../material-kit-react.jsx";
 
 const headerStyle = {
@@ -40,6 +42,7 @@ const headerStyle = {
   },
   container: {
     ...container,
+    paddingleft: "60px",
     padding: '0 0',
     minHeight: "50px",
     flex: "1",

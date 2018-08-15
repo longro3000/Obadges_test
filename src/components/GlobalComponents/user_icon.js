@@ -31,9 +31,8 @@ class UserIcon extends Component{
       classes.imgTag
     );
     return (
-    <GridContainer>
-      <GridItem xs={12} sm={12} md={3}>
-            <Card plain>
+      <GridItem xs={12} sm={12} md={12} className={classes.cardGrid}>
+            <Card plain className={classes.card}>
               <GridItem xs={12} sm={12} md={12} className={classes.imageGrid}>
                 <Link to={`/tribe/${user.id}`}>
                 <img src={user.image} className={classes.imgFluid} />
@@ -45,26 +44,25 @@ class UserIcon extends Component{
                 <small className={classes.smallTitle}>{user.cluster}</small>
               </h4>
               <CardBody>
-                <GridItem xs={12} sm={12} md={12} className={classes.tagGrid}>
-                    <div>
+                <div className={classes.tagGrid}>
+                    <div style={{marginBottom:"10px"}}>
                       <img src={tag5} className={imageClasses} />
-                      <span style={{float:"right"}}>
+                      <div style={{marginLeft:"60px"}}>
                         <h6>Creating Shared Value</h6>
                         <div>8</div>
-                      </span>
+                      </div>
                     </div>
                     <div>
                     <img src={otherTag} className={imageClasses} />
-                    <span style={{float:"right"}}>
+                    <div style={{marginLeft:"60px"}}>
                       <h6>CMS</h6>
                       <div>8</div>
-                    </span>
+                    </div>
                   </div>
-                </GridItem>
+                </div>
               </CardBody>
             </Card>
       </GridItem>
-    </GridContainer>
     );
   }
 }

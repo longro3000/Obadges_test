@@ -7,7 +7,7 @@ import homePageStyle from "../../assets/jss/material-kit-react/views/homePage.js
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 import GridContainer from "../../UI_components/Grid/GridContainer.jsx";
 import GridItem from "../../UI_components/Grid/GridItem.jsx";
-import TopUsers from '../CommunityPage/fetch_top_users';
+import TopUsers from '../TribePage/fetch_top_users';
 import background from '../../Image/Offy-flower.png';
 import Footer from '../../UI_components/Footer/Footer';
 
@@ -29,7 +29,7 @@ class HomeIndex extends Component {
               </div>
             </div>
           <Footer />
-        </div>
+      </div>
     );
   }
 }

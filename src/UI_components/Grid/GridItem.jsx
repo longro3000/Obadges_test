@@ -9,8 +9,8 @@ const style = {
     width: "100%",
     minHeight: "1px",
     paddingTop: "20px",
-    paddingRight: "20px",
-    paddingLeft: "20px",
+    paddingRight: "0px",
+    paddingLeft: "0px",
     flexBasis: "auto"
   }
 };

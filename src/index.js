@@ -8,9 +8,9 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 import HomeIndex from './components/HomePage/home_index';
-import CommunityIndex from './components/CommunityPage/community_index';
+import TribeIndex from './components/TribePage/tribe_index';
 import BadgeIndex from './components/BadgePage/badge_index';
-import UserDetail from './components/CommunityPage/user_detail';
+import UserDetail from './components/TribePage/user_detail';
 import BadgeDetail from './components/BadgePage/badge_detail';
 import AddBadge from './components/AddBadgePage/add_badge';
 
@@ -23,7 +23,7 @@ ReactDOM.render(
         <Switch>
           <Route path='/addbadge' component={AddBadge}/>
           <Route path='/tribe/:id' component={UserDetail}/>
-          <Route path='/tribe' component={CommunityIndex}/>
+          <Route path='/tribe' component={TribeIndex}/>
           <Route path='/badge/:id' component={BadgeDetail}/>
           <Route path='/badge' component={BadgeIndex}/>
           <Route path='/' component={HomeIndex}/>

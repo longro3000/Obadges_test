@@ -1,7 +1,7 @@
 import { cardTitle, title } from "../../../material-kit-react.jsx";
 import imagesStyle from "../../imagesStyles.jsx";
 
-const userCardStyle = {
+const badgeCardStyle = {
   cardGrid:{
       position: "relative",
       width: "100%",
@@ -69,4 +69,4 @@ const userCardStyle = {
   }
 };
 
-export default userCardStyle;
+export default badgeCardStyle;

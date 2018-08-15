@@ -1,5 +1,5 @@
-import { container } from "../../material-kit-react.jsx";
-import headerLinksStyle from "../components/headerLinksStyle.jsx";
+import { container } from "../../../material-kit-react.jsx";
+import headerLinksStyle from "../../components/headerLinksStyle.jsx";
 
 const badgePageStyle = theme => ({
   container,

@@ -15,9 +15,12 @@ import PageHeader from '../GlobalComponents/page_header';
 import CheckboxGroup from '../GlobalComponents/check_box';
 import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
-import badgePageStyle from "../../assets/jss/material-kit-react/views/badgePage.jsx";
+import badgePageStyle from "../../assets/jss/material-kit-react/views/BadgePageSections/badgePage.jsx";
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 
+//sample picture
+
+import BadgeBanner from "../../Image/badge-banner.png";
 
 class BadgeIndex extends Component {
   componentDidMount(){
@@ -71,21 +74,27 @@ class BadgeIndex extends Component {
 
   //------------render whole component--------------------
   render() {
+    const {classes}=this.props;
     const {tags}=this.state;
     console.log(tags);
     return (
         <div>
-        <PageHeader page='badge'/>
-        <div>Badge</div>
-        <div><SearchBar
-              onSearchTermChange={this.onSearchChange}
-              target='badges'
-                /></div>
-        <div className='col-xl-4'>{this.renderBadgeForm()}</div>
+          <PageHeader page='badge'/>
+          <Parallax image={BadgeBanner}>
+          </Parallax>
+          <div>
+            <div>Badge</div>
+            <div><SearchBar
+                  onSearchTermChange={this.onSearchChange}
+                  target='badges'
+                  />
+            </div>
+            <div className='col-xl-4'>{this.renderBadgeForm()}</div>
             <BadgeList
               Tags={this.state.tags}
               Badges={this.props.badges}
               BadgeSearch={this.state.badgeSearch} />
+          </div>
         </div>
     );
   }

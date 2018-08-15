@@ -7,13 +7,17 @@ import { fetchUsers } from '../../actions';
 //COMPONENTS
 import PageHeader from '../GlobalComponents/page_header';
 import TopUsers from './fetch_top_users';
-import tribePageStyle from "../../assets/jss/material-kit-react/views/tribePage.jsx";
+import tribePageStyle from "../../assets/jss/material-kit-react/views/TribePageSections/tribePage.jsx";
 import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
-
 import Footer from '../../UI_components/Footer/Footer';
-class CommunityIndex extends Component {
+
+//sample picture
+
+import TribeBanner from '../../Image/tribe-banner.png';
+
+class TribeIndex extends Component {
   componentDidMount(){
       this.props.fetchUsers();
   }
@@ -22,7 +26,7 @@ class CommunityIndex extends Component {
     return (
         <div>
           <PageHeader page='tribe'/>
-            <Parallax image={""}>
+            <Parallax image={TribeBanner}>
             </Parallax>
           <div className={classNames(classes.main)}>
               <TopUsers users={this.props.users}/>
@@ -36,4 +40,4 @@ class CommunityIndex extends Component {
 function mapStateToProps(state){
     return {users: state.users};
 }
-export default connect(mapStateToProps, {fetchUsers})(withStyles(tribePageStyle)(CommunityIndex));
+export default connect(mapStateToProps, {fetchUsers})(withStyles(tribePageStyle)(TribeIndex));

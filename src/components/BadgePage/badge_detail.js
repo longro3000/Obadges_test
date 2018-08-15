@@ -8,6 +8,8 @@ import {fetchUsers, fetchTags, fetchBadge} from '../../actions';
 import PageHeader from '../GlobalComponents/page_header';
 import UserIcon from '../GlobalComponents/user_icon';
 import Footer from '../../UI_components/Footer/Footer';
+import GridContainer from "../../UI_components/Grid/GridContainer.jsx";
+import GridItem from "../../UI_components/Grid/GridItem.jsx";
 
 class BadgeDetail extends Component {
   //automatic call fetch user detail to get user with particular id
@@ -26,11 +28,12 @@ class BadgeDetail extends Component {
         return _.map(users, (user)=>{
             if (_.includes(user.badges,badge.id))
                 return(
-
-                        <UserIcon
-                          key={user.id}
-                          user={user}
-                        />
+                        <GridItem xs={12} sm={6} md={3}>
+                          <UserIcon
+                            key={user.id}
+                            user={user}
+                          />
+                        </GridItem>
                       );
         });
   }
@@ -65,9 +68,9 @@ class BadgeDetail extends Component {
                     </div>
                 </div>
       </div>
-      <div>
+      <GridContainer>
           {this.renderUser()}
-      </div>
+      </GridContainer>
     <Footer />
     </div>
     );
