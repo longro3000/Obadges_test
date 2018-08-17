@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
+import { connect } from 'react-redux';
+
+//ACTION CREATOR
+import { fetchUsers } from '../../actions';
 
 import PageHeader from '../GlobalComponents/page_header';
 import homePageStyle from "../../assets/jss/material-kit-react/views/homePage.jsx";
@@ -13,8 +17,13 @@ import Footer from '../../UI_components/Footer/Footer';
 
 
 class HomeIndex extends Component {
+  componentDidMount(){
+      this.props.fetchUsers();
+  }
+
   render() {
     const {classes} = this.props;
+    const {users} = this.props;
     return (
         <div>
             <PageHeader page='home' />
@@ -25,7 +34,9 @@ class HomeIndex extends Component {
             </Parallax>
             <div className={classNames(classes.main)}>
               <div>
-                    <TopUsers />
+                    <TopUsers
+                      users={users}
+                      />
               </div>
             </div>
           <Footer />
@@ -34,4 +45,8 @@ class HomeIndex extends Component {
   }
 }
 
-export default withStyles(homePageStyle)(HomeIndex);
+function mapStateToProps( state ){
+    return { users: state.users}
+}
+
+export default connect(mapStateToProps, { fetchUsers })(withStyles(homePageStyle)(HomeIndex));

@@ -39,6 +39,14 @@ export function fetchTags(){
 }
 
 //---------------------BADGES------------------------------------
+export function fetchBadgeOnSearch(values){
+  const request=DUMP_BADGES;
+  console.logs(values);
+}
+export function fetchBadgeOnTag(values){
+    const request=DUMP_BADGES;
+    console.log(values);
+}
 
 export function fetchBadges(){
     const request = DUMP_BADGES;

@@ -54,10 +54,9 @@ export default function UserBadges ({tag, user, badges})
         <Slider {...settings}>
             {temp.map((x)=>{
               return(
-                <div>
+                <div key={badges[`${x}`].id}>
                   <BadgeIcon
                       badge={badges[`${x}`]}
-                      key={badges[`${x}`].id}
                       />
                     </div>)
               })}

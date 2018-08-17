@@ -20,6 +20,7 @@ import CardFooter from "../../UI_components/Card/CardFooter.jsx";
 class BadgeIcon extends Component {
   render(){
     const {badge} = this.props;
+    console.log(badge);
     const {classes} = this.props;
     const tooltip = (
         <Tooltip id='tooltip'>
@@ -28,18 +29,19 @@ class BadgeIcon extends Component {
         </Tooltip>
     )
     return (
-        <div className='col-xl-3' key={badge.id}>
-          <div>
-            <OverlayTrigger placement='top' overlay={tooltip}>
-            <Link to={`/badge/${badge.id}`}>
-              <img src={badge.image} style={{}} />
-            </Link>
-            </OverlayTrigger>
-          </div>
-          <div>{badge.name}</div>
-          <div>Created by...</div>
-        </div>
+          <Card plain className={classes.card}>
+              <GridItem className={classes.imageGrid}>
+                  <Link to={`/badge/${badge.id}`}>
+                      <img src={badge.image} className={classes.imgRoundedCircle} />
+                  </Link>
+              </GridItem>
+              <h4 className={classes.cardTitle}>
+                {bagde.name}
+                <br />
+                <small className={classes.smallTitle}>Created by {badge.issuer}</small>
+              </h4>
+          </Card>
     );
   }
 }
-export default withStyles()
+export default withStyles(badgeCardStyle)(BadgeIcon);

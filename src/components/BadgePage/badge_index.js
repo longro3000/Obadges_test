@@ -6,7 +6,7 @@ import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 //ACTION CREATOR
-import { fetchTags, fetchBadges } from '../../actions';
+import { fetchTags, fetchBadgeOnTag, fetchBadgeOnSearch } from '../../actions';
 
 //IMPORT COMPONENTS
 import BadgeList from './badge_list';
@@ -26,9 +26,6 @@ class BadgeIndex extends Component {
   componentDidMount(){
       this.props.fetchTags();
   }
-  componentWillMount(){
-      this.props.fetchBadges();
-  }
   //----CONSTRUCTOR-----
   constructor(props){
       super(props);
@@ -37,31 +34,25 @@ class BadgeIndex extends Component {
           badgeSearch: ''
       };
       this.onSearchChange= this.onSearchChange.bind(this);
+      this.props.fetchBadgeOnTag("");
+      this.props.fetchBadgeOnSearch("");
   }
   //------------when search bar value change, change value of SearchBadge in state---
 
   onSearchChange(term){
-      this.setState({
-          badgeSearch: term
-      });
+      this.props.fetchBadgeOnSearch();
 
   }
   //------------when a tag is checked , update tags state of component----
-  onTagChecked(Tags){
-      this.setState({
-          tags: Tags
-      });
-  }
   //-----------------when checkbox is submited-------------------------
   onSubmit(values){
-      this.onTagChecked(values.Tags);
+      this.props.fetchBadgeOnTag(values.Tags);
   }
   //------------render checkbox of badges---------------
 
   renderBadgeForm(){
     const {tags} = this.props;
     const { handleSubmit } = this.props;
-
     return(
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
             <CheckboxGroup
@@ -71,18 +62,25 @@ class BadgeIndex extends Component {
         </form>
     );
   }
-
+  //----------------------render badge based on tags and search---------
+  renderBadge(){
+        const {badges} = this.props;
+        return _.map(badges, badge=> {
+                          <BadgeIcon
+                              badge={badge}
+                            />
+                    });
+  }
   //------------render whole component--------------------
   render() {
     const {classes}=this.props;
     const {tags}=this.state;
-    console.log(tags);
     return (
         <div>
           <PageHeader page='badge'/>
-          <Parallax image={BadgeBanner}>
+          <Parallax small filter image={BadgeBanner}>
           </Parallax>
-          <div>
+          <div className={classes.main}>
             <div>Badge</div>
             <div><SearchBar
                   onSearchTermChange={this.onSearchChange}
@@ -90,10 +88,9 @@ class BadgeIndex extends Component {
                   />
             </div>
             <div className='col-xl-4'>{this.renderBadgeForm()}</div>
-            <BadgeList
-              Tags={this.state.tags}
-              Badges={this.props.badges}
-              BadgeSearch={this.state.badgeSearch} />
+            <div className='col-xl-8'>
+              {this.renderBadge()}
+            </div>
           </div>
         </div>
     );
@@ -110,4 +107,4 @@ function mapStateToProps( state){
 export default reduxForm({
   form: 'BadgeSearchForm'
 })(
-  connect(mapStateToProps,{ fetchTags, fetchBadges })(withStyles(badgePageStyle)(BadgeIndex)));
+  connect(mapStateToProps,{ fetchTags, fetchBadgeOnTag, fetchBadgeOnSearch })(withStyles(badgePageStyle)(BadgeIndex)));

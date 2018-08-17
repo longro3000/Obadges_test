@@ -31,9 +31,9 @@ class UserIcon extends Component{
       classes.imgTag
     );
     return (
-      <GridItem xs={12} sm={12} md={12} className={classes.cardGrid}>
+      <GridItem className={classes.cardGrid}>
             <Card plain className={classes.card}>
-              <GridItem xs={12} sm={12} md={12} className={classes.imageGrid}>
+              <GridItem className={classes.imageGrid}>
                 <Link to={`/tribe/${user.id}`}>
                 <img src={user.image} className={classes.imgFluid} />
                 </Link>

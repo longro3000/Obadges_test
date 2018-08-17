@@ -15,7 +15,7 @@ import Footer from '../../UI_components/Footer/Footer';
 
 //sample picture
 
-import TribeBanner from '../../Image/tribe-banner.png';
+import TribeBanner from '../../Image/tribe-banner.jpg';
 
 class TribeIndex extends Component {
   componentDidMount(){
