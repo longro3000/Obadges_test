@@ -36,7 +36,6 @@ class UserDetail extends Component {
                     tag={tag}
                     user={user}
                     badges={badges}
-                    //key={tags.id}
                     />
               </div>
           );

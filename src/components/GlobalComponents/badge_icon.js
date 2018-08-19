@@ -2,7 +2,6 @@
 
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -19,15 +18,8 @@ import CardFooter from "../../UI_components/Card/CardFooter.jsx";
 //sample image
 class BadgeIcon extends Component {
   render(){
-    const {badge} = this.props;
-    console.log(badge);
     const {classes} = this.props;
-    const tooltip = (
-        <Tooltip id='tooltip'>
-          <h4>{badge.name}</h4>
-          <div>Criteria: {badge.criteria}</div>
-        </Tooltip>
-    )
+    const {badge} = this.props;
     return (
           <Card plain className={classes.card}>
               <GridItem className={classes.imageGrid}>

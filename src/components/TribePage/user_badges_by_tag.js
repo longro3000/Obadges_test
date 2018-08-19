@@ -58,7 +58,7 @@ export default function UserBadges ({tag, user, badges})
                   <BadgeIcon
                       badge={badges[`${x}`]}
                       />
-                    </div>)
+                </div>)
               })}
               </Slider>);
 }

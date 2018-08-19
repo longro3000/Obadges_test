@@ -1,10 +1,13 @@
 import axios from 'axios';
 
-export const FETCH_USERS='fetch_users';
-export const FETCH_USER='fetch_user';
-export const FETCH_BADGES='fetch_badges';
-export const FETCH_TAGS='fetch_tags';
-export const FETCH_BADGE='fetch_badge';
+export const FETCH_USERS = 'fetch_users';
+export const FETCH_USER = 'fetch_user';
+export const FETCH_BADGES = 'fetch_badges';
+export const FETCH_TAGS = 'fetch_tags';
+export const FETCH_BADGE = 'fetch_badge';
+export const FETCH_BADGE_ON_SEARCH = 'fetch_badges_on_search';
+export const FETCH_BADGE_ON_TAG = 'fetch_badges_on_search';
+
 
 import {DUMP_USERS} from '../reducers/dump_users';
 import {DUMP_TAGS} from '../reducers/dump_tags';
@@ -41,11 +44,17 @@ export function fetchTags(){
 //---------------------BADGES------------------------------------
 export function fetchBadgeOnSearch(values){
   const request=DUMP_BADGES;
-  console.logs(values);
+  return {
+      type: FETCH_BADGE_ON_SEARCH,
+      payload: request
+  };
 }
 export function fetchBadgeOnTag(values){
     const request=DUMP_BADGES;
-    console.log(values);
+    return {
+        type: FETCH_BADGE_ON_TAG,
+        payload: request
+    };
 }
 
 export function fetchBadges(){
