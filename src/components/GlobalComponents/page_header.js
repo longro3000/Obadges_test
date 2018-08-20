@@ -23,7 +23,7 @@ class PageHeader extends Component {
     return (
                     <Header
                         brand={<img src={logo}/>}
-                        color='transparent'
+                        color='primary'
                         fixed
                         changeColorOnScroll={{
                             height: ((page === 'home') ? 1200 : 400),

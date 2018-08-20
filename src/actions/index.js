@@ -24,7 +24,7 @@ export function fetchUsers(){
 }
 
 export function fetchUser(id){
-    const temp=_.mapKeys(DUMP_USERS, 'id');
+    const temp = _.mapKeys(DUMP_USERS, 'id');
     const request=temp[`${id}`];
     return {
         type: FETCH_USER,
@@ -43,14 +43,14 @@ export function fetchTags(){
 
 //---------------------BADGES------------------------------------
 export function fetchBadgeOnSearch(values){
-  const request=DUMP_BADGES;
+  const request = DUMP_BADGES;
   return {
       type: FETCH_BADGE_ON_SEARCH,
       payload: request
   };
 }
 export function fetchBadgeOnTag(values){
-    const request=DUMP_BADGES;
+    const request = DUMP_BADGES;
     return {
         type: FETCH_BADGE_ON_TAG,
         payload: request
@@ -65,8 +65,8 @@ export function fetchBadges(){
     };
 }
 export function fetchBadge(id){
-    const temp=_.mapKeys(DUMP_BADGES, 'id');
-    const request=temp[`${id}`];
+    const temp = _.mapKeys(DUMP_BADGES, 'id');
+    const request = temp[`${id}`];
     return {
         type: FETCH_BADGE,
         payload: request

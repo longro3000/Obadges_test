@@ -15,7 +15,7 @@ import Footer from '../../UI_components/Footer/Footer';
 
 //sample picture
 
-import TribeBanner from '../../Image/tribe-banner.jpg';
+import TribeBanner from '../../Image/tribe-banner.png';
 
 class TribeIndex extends Component {
   componentDidMount(){
@@ -26,7 +26,7 @@ class TribeIndex extends Component {
     return (
         <div>
           <PageHeader page='tribe'/>
-            <Parallax image={TribeBanner}>
+            <Parallax small filter image={TribeBanner}>
             </Parallax>
           <div className={classNames(classes.main)}>
               <TopUsers users={this.props.users}/>

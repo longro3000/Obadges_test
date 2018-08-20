@@ -1,6 +1,6 @@
 //-----------------COMPONENT TO DISPLAY BADGE ICON-----------------------
 
-import React, {Component} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from "classnames";
 // @material-ui/core components
@@ -16,10 +16,10 @@ import Card from "../../UI_components/Card/Card.jsx";
 import CardBody from "../../UI_components/Card/CardBody.jsx";
 import CardFooter from "../../UI_components/Card/CardFooter.jsx";
 //sample image
-class BadgeIcon extends Component {
-  render(){
-    const {classes} = this.props;
-    const {badge} = this.props;
+function BadgeIcon({...props}) {
+    const {classes} = props;
+    const {badge} = props;
+
     return (
           <Card plain className={classes.card}>
               <GridItem className={classes.imageGrid}>
@@ -28,12 +28,11 @@ class BadgeIcon extends Component {
                   </Link>
               </GridItem>
               <h4 className={classes.cardTitle}>
-                {bagde.name}
+                {badge.name}
                 <br />
                 <small className={classes.smallTitle}>Created by {badge.issuer}</small>
               </h4>
           </Card>
     );
   }
-}
 export default withStyles(badgeCardStyle)(BadgeIcon);

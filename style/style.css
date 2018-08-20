@@ -10,11 +10,6 @@
  * License Creative Tim (https://www.creative-tim.com/license)
  *
  * ========================================================= */
-.picture-profile{
-  width:75px;
-  height:40px;
-  padding: -5px -5px;
-}
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -75,7 +70,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  background-color: #F0F5F7;
+  background-color: #F0F5F7 !important;
   color: #3C4858;
   margin: 0;
   font-size: 1rem;

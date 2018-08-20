@@ -1,5 +1,4 @@
 import { container } from "../../../material-kit-react.jsx";
-import headerLinksStyle from "../../components/headerLinksStyle.jsx";
 
 const tribePageStyle = theme => ({
   container,
@@ -21,6 +20,7 @@ const tribePageStyle = theme => ({
   main: {
     background: "#FFFFFF",
     position: "relative",
+    zIndex: "3"
   },
   link: {
     textDecoration: "none"
@@ -30,8 +30,7 @@ const tribePageStyle = theme => ({
   },
   backgroundcontainer: {
     padding: "230px 290px 200px 290px"
-  },
-  ...headerLinksStyle(theme)
+  }
 });
 
 export default tribePageStyle;

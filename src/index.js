@@ -19,7 +19,6 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
-      <div>
         <Switch>
           <Route path='/addbadge' component={AddBadge}/>
           <Route path='/tribe/:id' component={UserDetail}/>
@@ -28,7 +27,6 @@ ReactDOM.render(
           <Route path='/badge' component={BadgeIndex}/>
           <Route path='/' component={HomeIndex}/>
         </Switch>
-      </div>
     </BrowserRouter>
   </Provider>
-  , document.querySelector('.container'));
+  , document.getElementById('root'));

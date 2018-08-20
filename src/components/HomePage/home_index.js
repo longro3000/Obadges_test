@@ -27,7 +27,7 @@ class HomeIndex extends Component {
     return (
         <div>
             <PageHeader page='home' />
-            <Parallax image={''}>
+            <Parallax>
               <div className={classes.backgroundcontainer}>
                 <img src={background} />
               </div>

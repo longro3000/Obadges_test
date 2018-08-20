@@ -1,5 +1,4 @@
 import { container } from "../../../material-kit-react.jsx";
-import headerLinksStyle from "../../components/headerLinksStyle.jsx";
 
 const badgePageStyle = theme => ({
   container,
@@ -30,8 +29,7 @@ const badgePageStyle = theme => ({
   },
   backgroundcontainer: {
     padding: "230px 290px 200px 290px"
-  },
-  ...headerLinksStyle(theme)
+  }
 });
 
 export default badgePageStyle;

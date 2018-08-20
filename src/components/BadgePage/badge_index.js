@@ -17,7 +17,7 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import badgePageStyle from "../../assets/jss/material-kit-react/views/BadgePageSections/badgePage.jsx";
 import Parallax from "../../UI_components/Parallax/Parallax.jsx";
-
+import BadgeIcon from '../GlobalComponents/badge_icon';
 //sample picture
 
 import BadgeBanner from "../../Image/badge-banner.png";
