@@ -1,4 +1,7 @@
 const imagesStyles = {
+  imgBadge:{
+      margin: "auto"
+  },
   imgTag:{
       float: "left"
   },

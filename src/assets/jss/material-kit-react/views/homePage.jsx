@@ -29,6 +29,9 @@ const homePageStyle = theme => ({
   },
   backgroundcontainer: {
     padding: "230px 290px 200px 290px"
+  },
+  icon:{
+      margin:"auto"
   }
 });
 

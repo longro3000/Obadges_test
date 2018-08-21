@@ -12,9 +12,11 @@ import Parallax from "../../UI_components/Parallax/Parallax.jsx";
 import GridContainer from "../../UI_components/Grid/GridContainer.jsx";
 import GridItem from "../../UI_components/Grid/GridItem.jsx";
 import TopUsers from '../TribePage/fetch_top_users';
-import background from '../../Image/Offy-flower.png';
 import Footer from '../../UI_components/Footer/Footer';
 
+//local images
+import TribeIcon from '../../Image/tribe-icon.png'
+import background from '../../Image/Offy-flower.png';
 
 class HomeIndex extends Component {
   componentDidMount(){
@@ -32,13 +34,14 @@ class HomeIndex extends Component {
                 <img src={background} />
               </div>
             </Parallax>
-            <div className={classNames(classes.main)}>
-              <div>
-                    <TopUsers
-                      users={users}
-                      />
+            <GridContainer className={classes.container}>
+              <div className={classes.main}>
+                <GridItem>
+                  <img src={TribeIcon} className={classes.icon}/>
+                </GridItem>
+                
               </div>
-            </div>
+            </GridContainer>
           <Footer />
       </div>
     );

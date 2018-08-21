@@ -28,8 +28,7 @@ const badgeCardStyle = {
   imageGrid: {
     marginLeft: "auto",
     marginRight: "auto",
-    paddingLeft: "0px",
-    paddingRight: "0px",
+    padding:"auto",
     Width: "260px",
     Height:"260px"
   },
@@ -43,7 +42,10 @@ const badgeCardStyle = {
       paddingTop: "auto",
       textAlign: "left"
     },
-  cardTitle,
+  badgeTitle:{
+        cardTitle,
+        textAlign: "center"
+  },
   smallTitle: {
     color: "#8A8C8F"
   },

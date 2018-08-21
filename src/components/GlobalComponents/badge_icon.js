@@ -19,15 +19,19 @@ import CardFooter from "../../UI_components/Card/CardFooter.jsx";
 function BadgeIcon({...props}) {
     const {classes} = props;
     const {badge} = props;
+    const imageclass = classNames(
+          classes.imgRoundedCircle,
+          classes.imgBadge
+    );
 
     return (
           <Card plain className={classes.card}>
               <GridItem className={classes.imageGrid}>
                   <Link to={`/badge/${badge.id}`}>
-                      <img src={badge.image} className={classes.imgRoundedCircle} />
+                      <img src={badge.image} className={classes.imageClass} />
                   </Link>
               </GridItem>
-              <h4 className={classes.cardTitle}>
+              <h4 className={classes.badgeTitle}>
                 {badge.name}
                 <br />
                 <small className={classes.smallTitle}>Created by {badge.issuer}</small>
