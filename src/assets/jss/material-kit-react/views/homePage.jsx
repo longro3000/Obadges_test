@@ -2,6 +2,17 @@ import { container } from "../../material-kit-react.jsx";
 
 const homePageStyle = theme => ({
   container,
+  newBadge:{
+      margin:"10% auto"
+  },
+  gridSlider:{
+      marginTop:"10%",
+      marginBottom:"15%"
+  },
+  gridIcon:{
+      width: "auto",
+      margin: "0 auto"
+  },
   brand: {
     color: "#FFFFFF",
     textAlign: "left"
@@ -17,8 +28,12 @@ const homePageStyle = theme => ({
     maxWidth: "500px",
     margin: "10px 0 0"
   },
-  main: {
-    background: "#FFFFFF",
+  tribeMain: {
+    backgroundColor: "#FFFFFF",
+    position: "relative",
+  },
+  badgeMain: {
+    backgroundColor: "transparent",
     position: "relative",
   },
   link: {

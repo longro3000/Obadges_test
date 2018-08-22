@@ -53,7 +53,7 @@ export default function TopUsers ({users})
               return(
                   <UserIcon
                       key={user.id}
-                      user = {users}
+                      user = {user}
                       />
                     )
               })}

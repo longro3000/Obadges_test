@@ -6,6 +6,10 @@ const tribePageStyle = theme => ({
     color: "#FFFFFF",
     textAlign: "left"
   },
+  gridIcon:{
+      width: "auto",
+      margin: "0 auto"
+  },
   title: {
     fontSize: "4.2rem",
     fontWeight: "600",
@@ -18,6 +22,7 @@ const tribePageStyle = theme => ({
     margin: "10px 0 0"
   },
   main: {
+    margin:"10% auto",
     background: "#FFFFFF",
     position: "relative",
     zIndex: "3"

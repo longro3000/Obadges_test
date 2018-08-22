@@ -37,12 +37,12 @@ class UserIcon extends Component{
                 <Link to={`/tribe/${user.id}`}>
                 <img src={user.image} className={classes.imgFluid} />
                 </Link>
-              </GridItem>
               <h4 className={classes.cardTitle}>
                 {user.name}
                 <br />
                 <small className={classes.smallTitle}>{user.cluster}</small>
               </h4>
+            </GridItem>
               <CardBody>
                 <div className={classes.tagGrid}>
                     <div style={{marginBottom:"10px"}}>

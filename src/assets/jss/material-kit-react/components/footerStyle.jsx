@@ -24,7 +24,8 @@ const footerStyle = {
   rightCorner: {
     padding:"0 10px",
   },
-  footer: {
+  footer:{
+    backgroundColor: "#fff",
     padding: "0.9375rem 0",
     textAlign: "center",
     display: "flex",
